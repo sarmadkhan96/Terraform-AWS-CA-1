@@ -1,8 +1,8 @@
-# Terraform AWS DVWA Docker EC2 Instance
-This Terraform code repository contains the necessary configuration to deploy a Dockerized version of Damn Vulnerable Web Application (DVWA) on an Amazon EC2 instance. DVWA is a vulnerable web application used for security testing and learning.
+# Terraform AWS Apache Static Page Docker EC2 Instance
+This Terraform code repository contains the necessary configuration to deploy a Dockerized version of Apache httpd on an Amazon EC2 instance.
 
 ## Features
-- Deploys DVWA web application on an EC2 instance.
+- Deploys Apache Server on an EC2 instance.
 - Accessible on port 80 of the EC2 instance's public IP address.
 - Public IP address of the EC2 instance is displayed after execution.
 
@@ -17,7 +17,7 @@ Before running this Terraform configuration, ensure you have the following prere
 
 1. Clone this repository to your local machine.
 ```bash
-  git clone https://github.com/imusabkhan/Terraform.git
+  git clone https://github.com/sarmadkhan96/Terraform-AWS-CA-1.git
 ```
 2. Navigate to the directory containing the Terraform code.
 ```bash
@@ -35,4 +35,4 @@ terraform destroy -auto-approve
 
 ## Accessing DVWA
 
-After the EC2 instance is provisioned, you can access DVWA by navigating to the public IP address of the instance in your web browser, followed by port 80.
+After the EC2 instance is provisioned, you can access Apache Server Static page by navigating to the public IP address of the instance in your web browser, followed by port 80.
