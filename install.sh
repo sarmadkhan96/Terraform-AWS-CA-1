@@ -9,11 +9,14 @@ sudo apt install docker.io -y
 # Start Docker service using systemd
 sudo systemctl start docker
 
-# Add the current user to the Docker group
-sudo usermod -aG docker $(whoami)
+#Pull the Apache Server image
+sudo docker pull httpd
 
-# Pull the DVWA image
-sudo docker pull vulnerables/web-dvwa
+# Docker subnet
+sudo docker network create --subnet="172.168.10.0/30" my_network
 
-# Port Forwarding from Local Machine to EC2 Instance on Port 80
-sudo docker run -d -p 80:80 vulnerables/web-dvwa
+#Port forward on local to EC2 on Port 80
+sudo docker run -d --name=myserver -p 80:80 httpd
+
+# Connect the custom subnet to the docker container
+sudo docker network connect my_network myserver
