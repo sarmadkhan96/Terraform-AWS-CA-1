@@ -33,6 +33,6 @@ Before running this Terraform configuration, ensure you have the following prere
 terraform destroy -auto-approve
 ```
 
-## Accessing DVWA
+## Accessing Apache Static Page
 
 After the EC2 instance is provisioned, you can access Apache Server Static page by navigating to the public IP address of the instance in your web browser, followed by port 80.
